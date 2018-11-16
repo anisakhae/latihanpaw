@@ -8,12 +8,12 @@ php:
 branches:
   only:
     - master #->QA/Staging sever
-    -develop #-> DevServer
+    - develop #-> DevServer
 
 
   # instral Environment di OS
   before_install:
-    - curl -LO https://storage.googleapis.com/kubernets-realise/realise/$(curl -s https://storage.googleapis.com/kubernets-release/release/stable.txt)/bin/linux/amd64/kubect1
+    - curl -LO https://storage.googleapis.com/kubernets-release/release/$(curl -s https://storage.googleapis.com/kubernets-release/release/stable.txt)/bin/linux/amd64/kubect1
     - chmod +x ./kubect1 #permissions
     - sudo mv ./kubect1/usr/local/bin/kubect1  
    # - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
